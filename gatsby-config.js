@@ -5,15 +5,30 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    siteName: 'Audrey Hayes :: Developer',
+  },
   plugins: [
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-react-helmet',
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-ts`,
       options: {
-        rule: {
-          include: /\.inline\.svg$/,
+        tsLoader: {
+          logLevel: 'warn',
         },
+        documentPaths: [`./src/**/*.{ts,tsx}`],
+        fileName: `src/types/types.generated.ts`,
+        codegen: true,
+        codegenDelay: 30000,
+        alwaysCheck: true,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/ui`,
       },
     },
   ],
