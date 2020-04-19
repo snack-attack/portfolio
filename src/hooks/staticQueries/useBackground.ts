@@ -4,12 +4,12 @@ import { BackgroundQuery } from '../../types/types.generated';
 export const useBackground = () => {
     const result = useStaticQuery<BackgroundQuery>(graphql`
         query background {
-            allFile(filter: { extension: { eq: "jpg" } }) {
+            allFile(filter: { extension: { eq: "png" } }) {
                 edges {
                     node {
                         base
                         childImageSharp {
-                            fluid(fit: CONTAIN) {
+                            fluid {
                                 aspectRatio
                                 base64
                                 originalName
