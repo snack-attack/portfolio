@@ -2431,14 +2431,7 @@ export type StringQueryOperatorInput = {
 export type BackgroundQueryVariables = {};
 
 
-export type BackgroundQuery = { allImageSharp: { edges: Array<{ node: { resize?: Maybe<Pick<ImageSharpResize, 'width' | 'height' | 'src' | 'originalName'>> } }> } };
-
-export type PinkQueryVariables = {};
-
-
-export type PinkQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'originalName'>> }> }> };
-
-export type YellowQueryVariables = {};
-
-
-export type YellowQuery = { file?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<Pick<ImageSharpFixed, 'originalName'>> }> }> };
+export type BackgroundQuery = { allFile: { edges: Array<{ node: (
+        Pick<File, 'base'>
+        & { childImageSharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'base64' | 'originalName' | 'sizes' | 'src' | 'srcSet'>> }> }
+      ) }> } };

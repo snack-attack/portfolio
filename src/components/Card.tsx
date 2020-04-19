@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Img from 'gatsby-image';
-import { usePink } from '../hooks/staticQueries/usePink';
-import { useYellow } from '../hooks/staticQueries/useYellow';
+import { useBackground } from '../hooks/staticQueries/useBackground';
 
 export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
     title?: string;
@@ -22,21 +21,29 @@ export const Card: React.FunctionComponent<ICardProps> = ({
     tags,
     tools,
 
-    // backgroundColor,
+    backgroundColor,
 
     siteUrl,
     repoUrl,
 
     className,
 }) => {
-    const { pink } = usePink();
-    const { yellow } = useYellow();
+    const { backgrounds } = useBackground();
+
+    const filteredBackground = backgrounds.filter(
+        background =>
+            background.node.childImageSharp.fluid.originalName.slice(0, -4) ===
+            backgroundColor
+    );
 
     return (
         <div className={`work-card ${className}`}>
             <div className="meta">
                 <Img
-                    fixed={yellow}
+                    fluid={
+                        filteredBackground[0].node.childImageSharp.fluid ||
+                        backgrounds[0].node.childImageSharp.fluid
+                    }
                     className="photo"
                     alt="stucco-like texture"
                 ></Img>

@@ -1,17 +1,22 @@
 import { useStaticQuery, graphql } from 'gatsby';
-// import { YellowQuery } from '../../types/types.generated';
+import { BackgroundQuery } from '../../types/types.generated';
 
 export const useBackground = () => {
-    const result = useStaticQuery<any>(graphql`
+    const result = useStaticQuery<BackgroundQuery>(graphql`
         query background {
-            allImageSharp {
+            allFile(filter: { extension: { eq: "jpg" } }) {
                 edges {
                     node {
-                        resize(width: 150, height: 150) {
-                            width
-                            height
-                            src
-                            originalName
+                        base
+                        childImageSharp {
+                            fluid(fit: CONTAIN) {
+                                aspectRatio
+                                base64
+                                originalName
+                                sizes
+                                src
+                                srcSet
+                            }
                         }
                     }
                 }
@@ -20,6 +25,6 @@ export const useBackground = () => {
     `);
 
     return {
-        background: result.allImageSharp.edges.node.resize,
+        backgrounds: result.allFile.edges,
     };
 };

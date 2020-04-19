@@ -78,7 +78,7 @@ export const IndexPage: React.FunctionComponent = () => {
                 </h1>
                 <p>
                     My name is <strong>Audrey</strong> and I'm a{' '}
-                    <strong>full stack developer</strong>.
+                    <strong>fullstack developer</strong>.
                 </p>
             </section>
 
