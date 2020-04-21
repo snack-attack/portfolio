@@ -101,13 +101,17 @@ a {
 
 /* TOP HEADER */
 header {
-  margin-bottom: 4vh;
+  display: flex;
 }
 
 header .top-header {
   background-color: white;
   padding: 10px 0 0 0;
-  width: 100%;
+}
+
+header>nav {
+  margin-left: auto;
+  margin-right: 25px;
 }
 
 .top-header .brand {
@@ -119,8 +123,6 @@ header .top-header {
     text-align: left;
     text-align: initial;
     padding: 0 15px;
-    width: 50%;
-    float: left;
   }
 }
 
@@ -128,11 +130,6 @@ header .top-header {
   font-family: 'Anton', sans-serif;
   letter-spacing: 0.2rem;
   font-size: 1.3rem;
-}
-
-.top-header nav {
-  float: right;
-  padding: 0 15px;
 }
 
 .top-header nav ul li {
@@ -145,9 +142,8 @@ header .top-header {
 }
 
 .social-nav {
-  display: block;
-  z-index: -100;
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 /* 

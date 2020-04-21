@@ -30,7 +30,7 @@ export const IndexPage: React.FunctionComponent = () => {
                 <link rel="icon" href="/favicon.ico" type="image/png" />
             </Helmet>
             <header>
-                <div className="top-header sticky">
+                <div className="top-header">
                     <div className="brand">
                         <i className="icon inline">
                             <a href="#top">
