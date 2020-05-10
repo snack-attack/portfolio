@@ -1,13 +1,15 @@
 import * as React from 'react';
-import Img from 'gatsby-image';
-import { useBackground } from '../hooks/staticQueries/useBackground';
+import { Cactus1 } from './Cactus1';
+import { Cactus2 } from './Cactus2';
+import { Cactus3 } from './Cactus3';
+import { Cactus4 } from './Cactus4';
 
 export interface ICardProps extends React.HTMLAttributes<HTMLDivElement> {
     title?: string;
     subtitle?: string;
     tags?: string[];
-    tools?: string[];
-    backgroundColor: 'mint' | 'orange' | 'pink' | 'teal' | 'yellow';
+
+    cactus: number;
 
     siteUrl?: string;
     repoUrl?: string;
@@ -19,35 +21,32 @@ export const Card: React.FunctionComponent<ICardProps> = ({
     title,
     subtitle,
     tags,
-    tools,
 
-    backgroundColor,
+    cactus,
 
     siteUrl,
     repoUrl,
 
     className,
 }) => {
-    const { backgrounds } = useBackground();
-
-    const filteredBackground = backgrounds.filter(
-        background =>
-            background.node.childImageSharp.fluid.originalName.slice(0, -4) ===
-            backgroundColor
-    );
+    const switchCactus = (cacti: number) => {
+        switch (cacti) {
+            case 1:
+                return <Cactus1 />;
+            case 2:
+                return <Cactus2 />;
+            case 3:
+                return <Cactus3 />;
+            case 4:
+                return <Cactus4 />;
+            default:
+                return <Cactus1 />;
+        }
+    };
 
     return (
         <div className={`work-card ${className}`}>
-            <div className="meta">
-                <Img
-                    fluid={
-                        filteredBackground[0].node.childImageSharp.fluid ||
-                        backgrounds[0].node.childImageSharp.fluid
-                    }
-                    className="photo"
-                    alt="stucco-like texture"
-                ></Img>
-            </div>
+            <div className="meta">{switchCactus(cactus)}</div>
             <div className="description">
                 <div>
                     <h2>{title}</h2>

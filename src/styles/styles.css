@@ -46,7 +46,7 @@ li {
 
 @media only screen and (min-width: 1400px) {
   body {
-    max-width: 2400px;
+    max-width: 3600px;
     margin: 0 auto;
   }
 }
@@ -236,27 +236,12 @@ header nav ul li a .icon {
 /* WORK GALLERY */
 
 .work main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0 8vh;
-  flex-wrap: wrap;
-}
-
-.work main .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  display: grid;
+  margin: 0 2vh;
+  grid-template-columns: 1fr;
 }
 
 .work-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -270,6 +255,10 @@ header nav ul li a .icon {
   min-width: 50%;
   flex: 1 0 20%;
   margin: 25px;
+}
+
+.work-card .meta {
+  text-align: center;
 }
 
 .work-card .description {
@@ -318,15 +307,21 @@ header nav ul li a .icon {
   margin-top: 3rem;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1024px) {
+  .work main {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 8vh;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
   .work-card {
     max-width: 700px;
   }
 
-  .work-card .meta {
-    -ms-flex-preferred-size: 40%;
-    flex-basis: 40%;
-    max-height: 50%;
+  .work main {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 8vh;
   }
 
   .work-card .description {
@@ -334,6 +329,14 @@ header nav ul li a .icon {
     flex-basis: 60%;
   }
 }
+
+@media only screen and (min-width: 2400px) {
+  .work main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 8vh;
+  }
+}
+
 
 /* ABOUT */
 
