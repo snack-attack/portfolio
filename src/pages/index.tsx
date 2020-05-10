@@ -30,7 +30,7 @@ export const IndexPage: React.FunctionComponent = () => {
                 <link rel="icon" href="/favicon.ico" type="image/png" />
             </Helmet>
             <header>
-                <div className="top-header sticky">
+                <div className="top-header">
                     <div className="brand">
                         <i className="icon inline">
                             <a href="#top">
@@ -43,26 +43,34 @@ export const IndexPage: React.FunctionComponent = () => {
                 <nav>
                     <ul className="hidden-md-down">
                         <li>
-                            <a href="https://github.com/snack-attack">
+                            <a href="https://www.linkedin.com/in/audrey-hayes/">
                                 <FontAwesomeIcon
-                                    className="social-nav"
-                                    icon={['fab', 'github']}
+                                    className="icon"
+                                    icon={['fab', 'linkedin']}
                                 />
                             </a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/snack-attack/">
+                            <a href="https://github.com/snack-attack">
                                 <FontAwesomeIcon
-                                    className="social-nav"
-                                    icon={['fab', 'codepen']}
+                                    className="icon"
+                                    icon={['fab', 'github']}
                                 />
                             </a>
                         </li>
                         <li>
                             <a href="https://dev.to/snackattack">
                                 <FontAwesomeIcon
-                                    className="social-nav"
+                                    className="icon"
                                     icon={['fab', 'dev']}
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/13503646/snack-attack">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={['fab', 'stack-overflow']}
                                 />
                             </a>
                         </li>
@@ -98,55 +106,53 @@ export const IndexPage: React.FunctionComponent = () => {
 
                 <main>
                     <Card
-                        backgroundColor="yellow"
-                        title="Drinkly"
-                        subtitle="Social app that keeps track of ordering rounds at the pub."
-                        tags={['Mobile App']}
-                        tools={['React', 'Typescript', 'Ionic', 'GCP']}
-                        siteUrl="#"
-                        repoUrl="https://github.com/snack-attack/drinkly"
-                    />
-                    <Card
-                        backgroundColor="pink"
                         title="Doginator"
                         subtitle="An app that scrapes data from the Top Dog API to list dog breeds
                         and photos."
-                        tags={['API', 'Database Scraping']}
-                        tools={['PHP', 'MySQL', 'Javascript', 'HTML5', 'CSS3']}
+                        tags={[
+                            'API',
+                            'Database Scraping',
+                            'PHP',
+                            'MySQL',
+                            'Javascript',
+                            'HTML5',
+                            'CSS3',
+                        ]}
+                        cactus={1}
                         className="alt"
                         siteUrl="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-rmp-doginator"
                         repoUrl="https://github.com/Mayden-Academy/2019-rmp-doginator"
                     />
                     <Card
-                        backgroundColor="mint"
                         title="Whack-A-Rat"
                         subtitle="Whack-A-Mole game built with vanilla Javascript."
                         tags={['Game']}
-                        tools={['Javascript']}
+                        cactus={2}
                         siteUrl="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-whack-a-rat/"
                         repoUrl="https://github.com/Mayden-Academy/2019-whack-a-rat"
                     />
+
                     <Card
-                        backgroundColor="orange"
                         title="European Conference on Politics & Gender"
                         subtitle="Fully responsive custom theme using Concrete5 CMS and a plugin that handles conference submissions for hundreds of users and allows site admins to manage submission decisions and create reports."
-                        tags={['Site Redesign', 'Custom Plugin']}
-                        tools={[
+                        tags={[
+                            'Site Redesign',
+                            'Custom Plugin',
                             'PHP',
                             'Javascript',
                             'Bootstrap 3/4',
                             'Concrete5 CMS',
                         ]}
+                        cactus={1}
                         className="alt"
                         siteUrl="https://www.ecpg.eu/"
                         repoUrl="https://github.com/snack-attack/ECPG/tree/master/public/application"
                     />
                     <Card
-                        backgroundColor="teal"
                         title="Bath Institute for Rheumatic Disease"
                         subtitle="Custom WordPress theme development."
-                        tags={['Site Redesign']}
-                        tools={['WordPress', 'Docker']}
+                        tags={['Site Redesign', 'WordPress', 'Docker']}
+                        cactus={4}
                         siteUrl="https://birdbath.org.uk"
                         repoUrl="https://github.com/snack-attack/birdbath-theme"
                     />
@@ -212,6 +218,14 @@ export const IndexPage: React.FunctionComponent = () => {
                 <nav className="socials">
                     <ul>
                         <li>
+                            <a href="https://www.linkedin.com/in/audrey-hayes/">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={['fab', 'linkedin']}
+                                />
+                            </a>
+                        </li>
+                        <li>
                             <a href="https://github.com/snack-attack">
                                 <FontAwesomeIcon
                                     className="icon"
@@ -220,18 +234,18 @@ export const IndexPage: React.FunctionComponent = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/snack-attack/">
-                                <FontAwesomeIcon
-                                    className="icon"
-                                    icon={['fab', 'codepen']}
-                                />
-                            </a>
-                        </li>
-                        <li>
                             <a href="https://dev.to/snackattack">
                                 <FontAwesomeIcon
                                     className="icon"
                                     icon={['fab', 'dev']}
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/13503646/snack-attack">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={['fab', 'stack-overflow']}
                                 />
                             </a>
                         </li>
