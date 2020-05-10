@@ -43,26 +43,34 @@ export const IndexPage: React.FunctionComponent = () => {
                 <nav>
                     <ul className="hidden-md-down">
                         <li>
-                            <a href="https://github.com/snack-attack">
+                            <a href="https://www.linkedin.com/in/audrey-hayes/">
                                 <FontAwesomeIcon
-                                    className="social-nav"
-                                    icon={['fab', 'github']}
+                                    className="icon"
+                                    icon={['fab', 'linkedin']}
                                 />
                             </a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/snack-attack/">
+                            <a href="https://github.com/snack-attack">
                                 <FontAwesomeIcon
-                                    className="social-nav"
-                                    icon={['fab', 'codepen']}
+                                    className="icon"
+                                    icon={['fab', 'github']}
                                 />
                             </a>
                         </li>
                         <li>
                             <a href="https://dev.to/snackattack">
                                 <FontAwesomeIcon
-                                    className="social-nav"
+                                    className="icon"
                                     icon={['fab', 'dev']}
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/13503646/snack-attack">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={['fab', 'stack-overflow']}
                                 />
                             </a>
                         </li>
@@ -212,6 +220,14 @@ export const IndexPage: React.FunctionComponent = () => {
                 <nav className="socials">
                     <ul>
                         <li>
+                            <a href="https://www.linkedin.com/in/audrey-hayes/">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={['fab', 'linkedin']}
+                                />
+                            </a>
+                        </li>
+                        <li>
                             <a href="https://github.com/snack-attack">
                                 <FontAwesomeIcon
                                     className="icon"
@@ -220,18 +236,18 @@ export const IndexPage: React.FunctionComponent = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/snack-attack/">
-                                <FontAwesomeIcon
-                                    className="icon"
-                                    icon={['fab', 'codepen']}
-                                />
-                            </a>
-                        </li>
-                        <li>
                             <a href="https://dev.to/snackattack">
                                 <FontAwesomeIcon
                                     className="icon"
                                     icon={['fab', 'dev']}
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/13503646/snack-attack">
+                                <FontAwesomeIcon
+                                    className="icon"
+                                    icon={['fab', 'stack-overflow']}
                                 />
                             </a>
                         </li>

@@ -102,16 +102,23 @@ a {
 /* TOP HEADER */
 header {
   display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 header .top-header {
   background-color: white;
-  padding: 10px 0 0 0;
 }
 
 header>nav {
   margin-left: auto;
   margin-right: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.top-header {
+  width: 100%;
 }
 
 .top-header .brand {
@@ -119,6 +126,10 @@ header>nav {
 }
 
 @media only screen and (min-width: 767px) {
+  .top-header {
+    width: unset;
+  }
+
   .top-header .brand {
     text-align: left;
     text-align: initial;
@@ -129,7 +140,7 @@ header>nav {
 .top-header .brand .name {
   font-family: 'Anton', sans-serif;
   letter-spacing: 0.2rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .top-header nav ul li {
@@ -137,8 +148,13 @@ header>nav {
   position: relative;
 }
 
-.top-header nav ul li a {
+header nav ul li a {
   padding: 0 10px;
+
+}
+
+header nav ul li a .icon {
+  font-size: 2.5rem;
 }
 
 .social-nav {
