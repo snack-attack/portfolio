@@ -49,24 +49,27 @@ export const Card: React.FunctionComponent<ICardProps> = ({
                 ></Img>
             </div>
             <div className="description">
-                <h2>{title}</h2>
+                <div>
+                    <h2>{title}</h2>
 
-                {tags && <h4>{tags.join(', ')}</h4>}
+                    {tags && <h4>{tags.join(', ')}</h4>}
 
-                <p>{subtitle}</p>
-
-                {tools && <h4>{tools.join(', ')}</h4>}
-
-                {siteUrl && (
-                    <p className="read-more">
-                        <a href={siteUrl}>Visit Site</a>
-                    </p>
-                )}
-                {repoUrl && (
-                    <p className="read-more code">
-                        <a href={repoUrl}>View Code</a>
-                    </p>
-                )}
+                    <p>{subtitle}</p>
+                </div>
+                <div>
+                    {siteUrl && (
+                        <a href={siteUrl}>
+                            <button className="read-more">Visit Site</button>
+                        </a>
+                    )}
+                    {repoUrl && (
+                        <a href={repoUrl}>
+                            <button className="read-more code">
+                                View Code
+                            </button>
+                        </a>
+                    )}
+                </div>
             </div>
         </div>
     );

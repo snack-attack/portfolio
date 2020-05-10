@@ -85,9 +85,10 @@ h3 {
 }
 
 p,
-h4 {
+h4,
+button {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 a {
@@ -187,18 +188,18 @@ header nav ul li a .icon {
 .howdy h1 {
   padding: 16vh 0;
   color: #f8f8f8;
-  font-size: 11rem;
+  font-size: 20rem;
   margin: 0 auto;
   text-transform: uppercase;
 }
 
 .howdy .dot {
   color: #1c1b1f;
-  font-size: 13rem;
+  font-size: 22rem;
 }
 
 .howdy p {
-  font-size: 2.2rem;
+  font-size: 3rem;
   color: #f8f8f8;
   text-align: center;
   margin: 0 auto;
@@ -225,6 +226,7 @@ header nav ul li a .icon {
 .work .work-title p {
   padding: 0 8vh 4vh 8vh;
   text-align: center;
+  font-size: 3rem;
 }
 
 .work .work-title .dot {
@@ -232,6 +234,25 @@ header nav ul li a .icon {
 }
 
 /* WORK GALLERY */
+
+.work main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0 8vh;
+  flex-wrap: wrap;
+}
+
+.work main .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
 
 .work-card {
   display: -webkit-box;
@@ -241,42 +262,23 @@ header nav ul li a .icon {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 2.5rem auto;
   -webkit-box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2%;
   background: #fff;
   line-height: 1.3;
   border-radius: 5px;
-}
-
-.work-card a {
-  color: inherit;
-}
-
-.work-card a:hover {
-  color: #fc5956;
-}
-
-.work-card .photo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-position: center;
-  transition: -webkit-transform 0.2s;
-  -webkit-transition: -webkit-transform 0.2s;
-  -o-transition: transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
+  min-width: 50%;
+  flex: 1 0 20%;
+  margin: 25px;
 }
 
 .work-card .description {
-  padding: 1rem;
+  padding: 2.5rem 3.5rem;
   background: #fff;
   position: relative;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .work-card .description h2 {
@@ -285,39 +287,27 @@ header nav ul li a .icon {
 }
 
 .work-card .description h4 {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   text-transform: uppercase;
   color: #808080;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .read-more {
   margin-bottom: 0;
+  padding: 1.2rem;
+  background: #fc5956;
+  border: 2px solid #fc5956;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  position: relative;
 }
 
 .code {
   margin-bottom: 20px;
-  margin-top: 5px;
-}
-
-.description .read-more a {
-  color: #fc5956;
-  position: relative;
-}
-
-.description .read-more a:after {
-  content: '\f105';
-  font-family: 'FontAwesome';
-  margin-left: -10px;
-  margin-bottom: 3px;
-  opacity: 0;
-  vertical-align: middle;
-  transition: margin 0.3s, opacity 0.3s;
-}
-
-.description .read-more a:hover:after {
-  margin-left: 5px;
-  opacity: 1;
+  margin-top: 10px;
 }
 
 .work-card p {
@@ -328,61 +318,20 @@ header nav ul li a .icon {
   margin-top: 3rem;
 }
 
-.work-card p:first-of-type:before {
-  content: '';
-  position: absolute;
-  height: 5px;
-  background: #fc5956;
-  width: 35px;
-  top: -1.5rem;
-  border-radius: 3px;
-}
-
 @media only screen and (min-width: 640px) {
   .work-card {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
     max-width: 700px;
   }
 
   .work-card .meta {
     -ms-flex-preferred-size: 40%;
     flex-basis: 40%;
-    height: auto;
+    max-height: 50%;
   }
 
   .work-card .description {
     -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
-  }
-
-  .work-card .description:before {
-    -webkit-transform: skewX(-3deg);
-    transform: skewX(-3deg);
-    content: '';
-    background: #fff;
-    width: 30px;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-
-  .work-card.alt {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-  }
-
-  .work-card.alt .description::before {
-    left: inherit;
-    right: -10px;
-    -webkit-transform: skew(3deg);
-    transform: skew(3deg);
   }
 }
 
@@ -409,6 +358,8 @@ header nav ul li a .icon {
 
 .about .details p {
   margin: 4vh 8vh;
+  font-size: 2.2rem;
+  line-height: 2;
 }
 
 .about .details .dot {
