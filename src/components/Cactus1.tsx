@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const Cactus1: React.FunctionComponent<{}> = () => {
     return (
-        <svg width="227px" height="432px" viewBox="0 0 227 432" version="1.1">
+        <svg viewBox="0 0 227 432" version="1.1">
             <title>1-Cactus_Solid_And_outline-01</title>
             <g
                 id="Page-1"

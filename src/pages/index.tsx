@@ -93,14 +93,14 @@ export const IndexPage: React.FunctionComponent = () => {
             <section className="work">
                 <div className="work-title">
                     <h1 className="work-header">
-                        <div>Port</div>
+                        <div>work</div>
                         <div>
-                            folio<span className="dot">.</span>
+                            garden<span className="dot">.</span>
                         </div>
                     </h1>
                     <p>
-                        A selection of client case studies and personal
-                        projects.
+                        A selection of client case studies and side projects
+                        that I've nutured into life.
                     </p>
                 </div>
 
@@ -143,7 +143,7 @@ export const IndexPage: React.FunctionComponent = () => {
                             'Bootstrap 3/4',
                             'Concrete5 CMS',
                         ]}
-                        cactus={1}
+                        cactus={3}
                         className="alt"
                         siteUrl="https://www.ecpg.eu/"
                         repoUrl="https://github.com/snack-attack/ECPG/tree/master/public/application"
@@ -162,7 +162,7 @@ export const IndexPage: React.FunctionComponent = () => {
             <section className="about">
                 <div className="details">
                     <h1>
-                        <div>Ab</div>
+                        <div>ab</div>
                         out<span className="dot">.</span>
                     </h1>
                     <p>
@@ -195,7 +195,7 @@ export const IndexPage: React.FunctionComponent = () => {
                 <div className="title">
                     <h3>Want to work with me?</h3>
                     <h1>
-                        Get in
+                        get in
                         <div>
                             touch<span className="dot">.</span>
                         </div>
