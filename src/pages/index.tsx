@@ -93,56 +93,19 @@ export const IndexPage: React.FunctionComponent = () => {
             <section className="work">
                 <div className="work-title">
                     <h1 className="work-header">
-                        <div>work</div>
+                        <div>Port</div>
                         <div>
-                            garden<span className="dot">.</span>
+                            folio<span className="dot">.</span>
                         </div>
                     </h1>
-                    <p>
-                        A selection of client case studies and side projects
-                        that I've nutured into life.
-                    </p>
+                    <p>A selection of client case studies and side projects.</p>
                 </div>
 
                 <main>
                     <Card
-                        title="Doginator"
-                        subtitle="An app that scrapes data from the Top Dog API to list dog breeds
-                        and photos."
-                        tags={[
-                            'API',
-                            'Database Scraping',
-                            'PHP',
-                            'MySQL',
-                            'Javascript',
-                            'HTML5',
-                            'CSS3',
-                        ]}
-                        cactus={1}
-                        className="alt"
-                        siteUrl="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-rmp-doginator"
-                        repoUrl="https://github.com/Mayden-Academy/2019-rmp-doginator"
-                    />
-                    <Card
-                        title="Whack-A-Rat"
-                        subtitle="Whack-A-Mole game built with vanilla Javascript."
-                        tags={['Game']}
-                        cactus={2}
-                        siteUrl="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-whack-a-rat/"
-                        repoUrl="https://github.com/Mayden-Academy/2019-whack-a-rat"
-                    />
-
-                    <Card
                         title="European Conference on Politics & Gender"
-                        subtitle="Fully responsive custom theme using Concrete5 CMS and a plugin that handles conference submissions for hundreds of users and allows site admins to manage submission decisions and create reports."
-                        tags={[
-                            'Site Redesign',
-                            'Custom Plugin',
-                            'PHP',
-                            'Javascript',
-                            'Bootstrap 3/4',
-                            'Concrete5 CMS',
-                        ]}
+                        subtitle="Fully responsive custom theme using Concrete5 CMS. Developed a plugin that manages conference submissions for hundreds of users."
+                        tags={['Design', 'PHP', 'Javascript', 'Bootstrap']}
                         cactus={3}
                         className="alt"
                         siteUrl="https://www.ecpg.eu/"
@@ -150,11 +113,29 @@ export const IndexPage: React.FunctionComponent = () => {
                     />
                     <Card
                         title="Bath Institute for Rheumatic Disease"
-                        subtitle="Custom WordPress theme development."
-                        tags={['Site Redesign', 'WordPress', 'Docker']}
+                        subtitle="Designed and developed a custom WordPress theme for a local Bath charity group."
+                        tags={['Design', 'WordPress', 'Docker']}
                         cactus={4}
                         siteUrl="https://birdbath.org.uk"
                         repoUrl="https://github.com/snack-attack/birdbath-theme"
+                    />
+                    <Card
+                        title="Whack-A-Rat!"
+                        subtitle="'Whack-A-Mole' game built while attending Mayden Academy. I was mainly responsible for randomising the molerats and scoring."
+                        tags={['Game', 'Javascript']}
+                        cactus={2}
+                        siteUrl="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-whack-a-rat/"
+                        repoUrl="https://github.com/Mayden-Academy/2019-whack-a-rat"
+                    />
+                    <Card
+                        title="Doginator"
+                        subtitle="An app that scrapes data from the Top Dog API to display dog breeds
+                        and photos."
+                        tags={['PHP', 'MySQL', 'Javascript']}
+                        cactus={1}
+                        className="alt"
+                        siteUrl="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-rmp-doginator"
+                        repoUrl="https://github.com/Mayden-Academy/2019-rmp-doginator"
                     />
                 </main>
             </section>
@@ -162,28 +143,41 @@ export const IndexPage: React.FunctionComponent = () => {
             <section className="about">
                 <div className="details">
                     <h1>
-                        <div>ab</div>
+                        <div>Ab</div>
                         out<span className="dot">.</span>
                     </h1>
                     <p>
-                        I'm a fullstack developer and reluctant designer
-                        originally from Dallas, Texas. These days, I call a
-                        60-foot narrowboat on the River Avon in Southwest
-                        England my home.
+                        I'm a developer originally from Dallas, Texas. These
+                        days, I call a 60-foot narrowboat on the River Avon in
+                        Southwest England my home.
                     </p>
                     <p>
-                        In my spare time, I co-organize {''}
+                        I've been working in tech since 2017 and have a passion
+                        for both front and back-end development as well as an
+                        interest in dev ops and infrastructure. I enjoy building
+                        products that will improve the world and our experience
+                        of it.
+                    </p>
+                    <p>
+                        These days, I dedicate my spare time to{' '}
+                        <a href="https://dev.to/snackattack">
+                            {' '}
+                            writing about things I'm learning and doing
+                        </a>{' '}
+                        and increasing my{' '}
+                        <a href="https://github.com/snack-attack">
+                            {' '}
+                            contributions to open source software
+                        </a>
+                        .
+                    </p>
+                    <p>
+                        In a past life, I co-organised {''}
                         <a href="https://www.meetup.com/CodeHub-Bristol/">
                             CodeHub Bristol
                         </a>
                         , a local group for people interested in all things
                         code.
-                    </p>
-                    <p>
-                        With one years freelance web development experience, I
-                        am looking to join a team as a fullstack developer in a
-                        role that could potentially evolve to training or
-                        mentoring others.
                     </p>
                 </div>
                 <div className="texas">
@@ -195,7 +189,7 @@ export const IndexPage: React.FunctionComponent = () => {
                 <div className="title">
                     <h3>Want to work with me?</h3>
                     <h1>
-                        get in
+                        Get in
                         <div>
                             touch<span className="dot">.</span>
                         </div>
